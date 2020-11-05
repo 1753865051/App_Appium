@@ -1,0 +1,21 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="pymysql" />
+          <option value="scripts.*" />
+          <option value="page.page.MessageListPage" />
+          <option value="script.test_contact.yaml" />
+          <option value="pymsql" />
+          <option value="" />
+          <option value="day2.api.LoginAPI.app" />
+          <option value="day3.case.TestLogin.Login" />
+          <option value="day3.api.LoginApi.app" />
+          <option value="yaml" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
