@@ -42,6 +42,12 @@ class BaseAction:
         else:
             raise Exception("toast-Exception!!!")
 
+    def is_feature_exit(self,feature):
+        try:
+            self.find_element(feature)
+            return True
+        except Exception:
+            return False
     def scroll_page_one_time(self,direction="up"):
         """
         :param direction:

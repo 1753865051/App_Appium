@@ -1,0 +1,7 @@
+test_update_address:
+    test_update_address001:
+      name: "哈哈哈"
+      phone: "12345678901"
+      info: "你秦都区我带你去哦我的"
+      post_code: "100101"
+      toast: Null

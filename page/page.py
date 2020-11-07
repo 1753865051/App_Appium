@@ -1,4 +1,6 @@
 from page.about_page import AboutPage
+from page.address_list_page import AddressListPage
+from page.edit_address_page import EditAddressPage
 from page.home_page import HomePage
 from page.img_page import ImgPage
 from page.login_pge import LoginPage
@@ -36,3 +38,9 @@ class Page:
     @property
     def vip(self):
         return VipPage(self.driver)
+    @property
+    def address_list(self):
+        return AddressListPage(self.driver)
+    @property
+    def edit_address(self):
+        return EditAddressPage(self.driver)
