@@ -89,3 +89,8 @@ class BaseAction:
                     print("到底了")
                     break
                 page_source = self.driver.page_source
+    def press_back(self):
+        self.driver.press_keycode(4)
+
+    def press_enter(self):
+        self.driver.press_keycode(66)

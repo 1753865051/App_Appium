@@ -1,6 +1,6 @@
 import random
 import time
-
+import allure
 from selenium.webdriver.common.by import By
 from base.base_action import BaseAction
 
@@ -20,18 +20,30 @@ class EditAddressPage(BaseAction):
     #省市区
     area_featuer=By.ID, "com.yunmall.lc:id/area_title"
     save_button=By.XPATH, "//*[@text='保存']"
+    @allure.step('编辑地址 输入 收件人')
     def input_name(self, text):
         self.input(self.name_edit_text, text)
+    @allure.step('编辑地址 输入 手机号')
     def input_phone(self, text):
         self.input(self.phone_edit_text, text)
+
+    @allure.step('编辑地址 输入 地址')
     def input_info(self, text):
         self.input(self.info_edit_text, text)
+
+    @allure.step('编辑地址 输入 邮编')
     def input_post_code(self, text):
         self.input(self.post_code_edit_text, text)
+
+    @allure.step('编辑地址 设置 默认地址')
     def click_default_address(self):
         self.click(self.default_address_button)
+
+    @allure.step('编辑地址 点击 所在地')
     def click_region(self):
         self.click(self.region_button)
+
+    @allure.step('编辑地址 选择 区域')
     def choose_region(self):
         self.click_region()
         time.sleep(1)

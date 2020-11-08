@@ -1,3 +1,5 @@
+import time
+
 from base.base_analyze import analyze_file
 from base.base_driver import init_driver
 from page.page import Page
@@ -10,6 +12,9 @@ class TestUpdate:
     def setup(self):
         self.driver=init_driver()
         self.page=Page(self.driver)
+    def teardown(self):
+        time.sleep(1)
+        self.driver.quit()
     def test_update(self):
         #没有登录先登录
         self.page.home.login_if_not(self.page)

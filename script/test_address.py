@@ -1,5 +1,6 @@
-import pytest
+import time
 
+import pytest
 from base.base_analyze import analyze_file
 from base.base_driver import init_driver
 from page.page import Page
@@ -8,6 +9,9 @@ class TestAddress:
     def setup(self):
         self.driver=init_driver()
         self.page=Page(self.driver)
+    def teardown(self):
+        time.sleep(1)
+        self.driver.quit()
     #地址管理
     @pytest.mark.parametrize("args",analyze_file("address_data.yaml","test_add_address"))
     def test_add_address(self,args):
